@@ -5,22 +5,22 @@ Flask web app to inspect and debug **OAuth2/OIDC Authorization Code flows (with 
 ## What it does
 
 - **OAuth2 / OIDC**
-\ \ - Configure auth endpoint, token endpoint, client ID/secret, redirect URI, scopes, PKCE.
-\ \ - Start authorization code flow and inspect:
-\ \ \ \ - Authorization URL and parameters
-\ \ \ \ - Callback query (`code`, `state`, `error`, …)
-\ \ \ \ - Token request and response (JSON)
-\ \ \ \ - Decoded ID token header/payload (no signature validation)
-\ \ \ \ - Access token value
+    - Configure auth endpoint, token endpoint, client ID/secret, redirect URI, scopes, PKCE.
+    - Start authorization code flow and inspect:
+        - Authorization URL and parameters
+        - Callback query (`code`, `state`, `error`, …)
+        - Token request and response (JSON)
+        - Decoded ID token header/payload (no signature validation)
+        - Access token value
 
 - **SAML 2.0**
-\ \ - Configure IdP SSO URL, SP EntityID, ACS URL, NameID format.
-\ \ - Generate unsigned AuthnRequest (XML), encode as `SAMLRequest`, and redirect.
-\ \ - Inspect:
-\ \ \ \ - AuthnRequest XML and encoded value
-\ \ \ \ - Raw POST with `SAMLResponse`
-\ \ \ \ - Base64-decoded SAMLResponse XML
-\ \ \ \ - Simple parsed summary (issuer, subject, attributes)
+    - Configure IdP SSO URL, SP EntityID, ACS URL, NameID format.
+    - Generate unsigned AuthnRequest (XML), encode as `SAMLRequest`, and redirect.
+    - Inspect:
+        - AuthnRequest XML and encoded value
+        - Raw POST with `SAMLResponse`
+        - Base64-decoded SAMLResponse XML
+        - Simple parsed summary (issuer, subject, attributes)
 
 Profiles for both protocols are stored in the browser session.
 
